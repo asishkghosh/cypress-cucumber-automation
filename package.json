@@ -4,7 +4,9 @@
   "description": "test automation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "full-regression-headed-chrome": "cypress run --headed --browser chrome --spec 'cypress/e2e/*.feature' ",
+    "full-regression-headless-chrome": "cypress run --browser chrome --spec 'cypress/e2e/*.feature' "
   },
   "author": "Asish",
   "license": "ISC",
@@ -14,7 +16,15 @@
     "cypress": "^12.11.0",
     "ts-loader": "^9.4.2"
   },
-  "cypress-cucumber-preprocessor":{
-    "stepDefinitions": "cypress/support/step_definitions/**/*.js"
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js",
+    "html": {
+      "enabled": true,
+      "output": "cypress/report/cucumber-report/cucumber-html-report.html"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "cypress/report/cucumber-ndjson/cucumber-json-report.ndjson"
+    } 
   }
 }
