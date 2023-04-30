@@ -3,8 +3,7 @@
 Feature: WebDriverUniversity - Contact Us Page
 
     Background: Pre Conditional steps
-        Given I access webdriveruniversity home page
-        When I click on the contact us button
+        Given I access webdriveruniversity contactUs page
 
     Scenario: Validate Contact Us Page form submission
         And I enter a valid first name

@@ -14,17 +14,22 @@
     "@badeball/cypress-cucumber-preprocessor": "^16.0.3",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^12.11.0",
+    "multiple-cucumber-html-reporter": "^3.3.0",
     "ts-loader": "^9.4.2"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/support/step_definitions/**/*.js",
     "html": {
       "enabled": true,
-      "output": "cypress/report/cucumber-report/cucumber-html-report.html"
+      "output": "cypress/reports/cucumber-report/cucumber-html-report.html"
     },
     "messages": {
       "enabled": true,
-      "output": "cypress/report/cucumber-ndjson/cucumber-json-report.ndjson"
-    } 
+      "output": "cypress/reports/cucumber-ndjson/cucumber-json-report.ndjson"
+    },
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-json/cucumber-json-report.json"
+    }
   }
 }

@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+
+//login command
+Cypress.Commands.add('login', (email_selector,password_selector,email, password) => { 
+    cy.get(email_selector).type(email);
+    cy.get(password_selector).type(password);
+ })
+
+ //click and open the tab in the same window
+ Cypress.Commands.add('clickAndOpenTab', (selector) => {
+     cy.get(selector).invoke("removeAttr","target").click();
+ })

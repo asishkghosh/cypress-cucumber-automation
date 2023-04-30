@@ -3,8 +3,7 @@ Feature: Login page test case
 
 
     Background: Pre conditions
-        Given I access webdriveruniversity home page
-        When I click on the login portal button
+        Given I go to login page
 
     Scenario Outline: validate login page with valid credentials and invalid credentials
         And I enter a username "<username>" and password "<password>"
